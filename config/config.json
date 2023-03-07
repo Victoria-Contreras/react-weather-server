@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "weather_db_huza_user",
+    "password": "35RAHu4jbiagzf5qUZSFam2wKlNhj5sr",
+    "database": "weather_db_huza",
+    "host": "dpg-cg3mdld269v3bpbg958g-a",
     "dialect": "mysql"
   }
 }
