@@ -79,42 +79,42 @@ app.post('/user/sign-up', async (req, res) => {
 })
 
 app.post('/add-favorite', async (req, res) => {
-    console.log(req.session)
-
-    const user = await User.findAll({
-        where: {
-            username: {
-                [Op.eq]: req.session.user
+    if (req.session.user) {
+        const user = await User.findAll({
+            where: {
+                username: {
+                    [Op.eq]: req.session.user
+                }
             }
-        }
-    }).then(data => {
-        console.log(data)
-        Favorite.create({
-            city: req.body.city,
-            isFavorite: true,
-            userId: data[0].id,
-            createdAt: new Date(),
-            updatedAt: new Date()
-        }).catch(
-            res.status(403)
-        )
-
-        
-    });     
+        }).then(data => {
+            console.log(data)
+            Favorite.create({
+                city: req.body.city,
+                isFavorite: true,
+                userId: data[0].id,
+                createdAt: new Date(),
+                updatedAt: new Date()
+            }).catch(
+                res.status(403)
+            )
+        });
+    }
 });
 
 app.get('/view-favorites', async (req, res) => {
-    console.log(req.session.user)
-    const favorites = await User.findAll({
-        where: {
-            username: {
-                [Op.eq]: req.session.user
-            }
-        },
-        include: [{
-            model: Favorite
-        }]
-    })
+    if (req.session.user) {
+        const favorites = await User.findAll({
+            where: {
+                username: {
+                    [Op.eq]: req.session.user
+                }
+            },
+            include: [{
+                model: Favorite
+            }]
+        })
+        res.send(favorites)
+    }
 })
 
 app.listen(port, () => {
