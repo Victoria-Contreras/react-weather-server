@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 const Sequelize = require('sequelize');
-// const sequelize = new Sequelize('postgres://weather_db_huza_user:35RAHu4jbiagzf5qUZSFam2wKlNhj5sr@dpg-cg3mdld269v3bpbg958g-a/weather_db_huza')
+const sequelize = new Sequelize('postgres://react_weather_db_user:GJ8EeAWhnD1jvl2fywsAloR2IaNUiofF@dpg-cgk7mre4dad69r15k93g-a/react_weather_db')
 const { Op } = require('sequelize');
 const bcrypt = require('bcrypt');
 const session = require('express-session');

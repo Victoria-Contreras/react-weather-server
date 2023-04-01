@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "weather_db_huza_user",
-    "password": "35RAHu4jbiagzf5qUZSFam2wKlNhj5sr",
-    "database": "weather_db_huza",
-    "host": "dpg-cg3mdld269v3bpbg958g-a",
+    "username": "react_weather_db_user",
+    "password": "GJ8EeAWhnD1jvl2fywsAloR2IaNUiofF",
+    "database": "react_weather_db",
+    "host": "dpg-cgk7mre4dad69r15k93g-a",
     "dialect": "postgres"
   }
 }
