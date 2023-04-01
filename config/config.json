@@ -1,17 +1,17 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "password",
-    "database": "react-weather",
-    "host": "127.0.0.1",
+    "username": "react_weather_db_user",
+    "password": "GJ8EeAWhnD1jvl2fywsAloR2IaNUiofF",
+    "database": "react_weather_db",
+    "host": "dpg-cgk7mre4dad69r15k93g-a",
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "react_weather_db_user",
+    "password": "GJ8EeAWhnD1jvl2fywsAloR2IaNUiofF",
+    "database": "react_weather_db",
+    "host": "dpg-cgk7mre4dad69r15k93g-a",
+    "dialect": "postgres"
   },
   "production": {
     "username": "react_weather_db_user",
